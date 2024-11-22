@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { AuthContext } from "../context/AuthProvider";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
@@ -73,7 +73,7 @@ export default function Signin() {
           <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-md w-full max-w-md">
             <h1
               className="mb-8 text-3xl font-bold text-center bg-gradient-to-r from-blue-600 to-indigo-600 
-                            text-transparent bg-clip-text"
+                          text-transparent bg-clip-text"
             >
               Sundowners Enterprise
             </h1>
@@ -81,8 +81,8 @@ export default function Signin() {
             <form className="space-y-4" onSubmit={loginData}>
               <input
                 className="w-full px-4 py-3 rounded-lg border border-blue-100 
-                           focus:outline-none focus:border-blue-300 focus:ring-2 
-                           focus:ring-blue-100 transition-all duration-300"
+                         focus:outline-none focus:border-blue-300 focus:ring-2 
+                         focus:ring-blue-100 transition-all duration-300"
                 type="email"
                 placeholder="Email"
                 value={email}
@@ -92,8 +92,8 @@ export default function Signin() {
 
               <input
                 className="w-full px-4 py-3 rounded-lg border border-blue-100 
-                           focus:outline-none focus:border-blue-300 focus:ring-2 
-                           focus:ring-blue-100 transition-all duration-300"
+                         focus:outline-none focus:border-blue-300 focus:ring-2 
+                         focus:ring-blue-100 transition-all duration-300"
                 type="password"
                 placeholder="Password"
                 value={password}
@@ -103,8 +103,8 @@ export default function Signin() {
 
               <button
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold
-                           hover:bg-blue-700 transform hover:-translate-y-0.5 
-                           transition-all duration-300 shadow-sm hover:shadow-md"
+                         hover:bg-blue-700 transform hover:-translate-y-0.5 
+                         transition-all duration-300 shadow-sm hover:shadow-md"
                 type="submit"
               >
                 Sign In
@@ -114,7 +114,7 @@ export default function Signin() {
                 Don't have an account?{" "}
                 <Link
                   className="text-blue-600 hover:text-blue-700 font-semibold 
-                             transition-colors duration-300"
+                           transition-colors duration-300"
                   to="/signup"
                 >
                   Sign Up

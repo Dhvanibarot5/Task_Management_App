@@ -8,14 +8,14 @@ import axios from "axios";
 
 import Header from "./components/Header";
 import Signup from "./pages/Signup";
-import Signin from "./pages/Signin";
+// import Signin from "./pages/Signin";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
 import AddTask from "./pages/AddTask";
 import Logout from "./components/Logout";
 import OtherUserProfile from "./pages/OtherUserProfile";
 
-import { requestPermission } from "./firebase.js"; 
+import { requestPermission } from "./firebase.js";
 import { useEffect } from "react";
 
 function App() {
