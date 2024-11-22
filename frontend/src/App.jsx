@@ -15,14 +15,13 @@ import AddTask from "./pages/AddTask";
 import Logout from "./components/Logout";
 import OtherUserProfile from "./pages/OtherUserProfile";
 
-import { requestPermission } from "./firebase.js"; // Firebase import for permissions
+import { requestPermission } from "./firebase.js"; 
 import { useEffect } from "react";
 
 function App() {
   const BASE_URL = import.meta.env.VITE_BASE_URL;
 
   useEffect(() => {
-    // Register Service Worker
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker
@@ -38,7 +37,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Request Notification Permission and Fetch FCM Token
     const token = localStorage.getItem("token");
 
     const getTokenAndUpdate = async () => {
